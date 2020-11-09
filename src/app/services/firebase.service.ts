@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore  } from '@angular/fire/firestore';
+import { Resturants } from '../shared/resturants.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -26,5 +27,9 @@ isLoggedIn = false
         localStorage.setItem('user', JSON.stringify(res.user))
 
       })
+    }
+
+    getResturants() {
+      return this.firestore.collection('resturants').snapshotChanges();
     }
   }

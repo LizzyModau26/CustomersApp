@@ -10,7 +10,21 @@
   </ion-toolbar>
 <ion-content>
   <div id="main-cont">
-    <div id="mid-cont">
+<div id="mid-cont">
+
+  <div *ngFor="let item of restuList" >
+      <ion-card>
+        <img src= {{item.img}}  />
+        <ion-card-header>
+          <ion-card-subtitle>{{item.resName}} </ion-card-subtitle>
+          <ion-card-title>{{item.resAdd}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{item.resDes}} <br> {{item.resRate}}
+        </ion-card-content>
+      </ion-card>
+    
     </div>
+</div>
   </div>
 </ion-content>

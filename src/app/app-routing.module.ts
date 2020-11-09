@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'main',
     loadChildren: () => import('./main/main.module').then( m => m.MainPageModule)
   },
+  {
+    path: 'res-view',
+    loadChildren: () => import('./res-view/res-view.module').then( m => m.ResViewPageModule)
+  },
 ];
 
 @NgModule({
