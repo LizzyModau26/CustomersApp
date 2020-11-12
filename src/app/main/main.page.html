@@ -11,10 +11,11 @@
 <ion-content>
   <div id="main-cont">
 <div id="mid-cont">
-
+<ion-grid>
   <div *ngFor="let item of restuList" >
-      <ion-card>
-        <img src= {{item.img}}  />
+    <ion-row>
+      <ion-card [routerLink]="'/res-view/'+item.id">
+        <img style=" height: 120px;" src= {{item.img}} >
         <ion-card-header>
           <ion-card-subtitle>{{item.resName}} </ion-card-subtitle>
           <ion-card-title>{{item.resAdd}}</ion-card-title>
@@ -23,8 +24,9 @@
           {{item.resDes}} <br> {{item.resRate}}
         </ion-card-content>
       </ion-card>
-    
+    </ion-row>
     </div>
+  </ion-grid>
 </div>
   </div>
 </ion-content>

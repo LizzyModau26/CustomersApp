@@ -24,8 +24,20 @@ const routes: Routes = [
     loadChildren: () => import('./main/main.module').then( m => m.MainPageModule)
   },
   {
-    path: 'res-view',
+    path: 'res-view/:id',
     loadChildren: () => import('./res-view/res-view.module').then( m => m.ResViewPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'my-bookings',
+    loadChildren: () => import('./my-bookings/my-bookings.module').then( m => m.MyBookingsPageModule)
+  },
+  {
+    path: 'edi-pro',
+    loadChildren: () => import('./edi-pro/edi-pro.module').then( m => m.EdiProPageModule)
   },
 ];
 
