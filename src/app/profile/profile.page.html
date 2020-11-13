@@ -4,10 +4,26 @@
     <ion-icon routerLink="/main" name="arrow-back-outline" color="primary" autoHide="false" style="zoom:1.5; margin-left: 10px;"></ion-icon>
   </ion-buttons>
   <ion-buttons slot="end">
-    <ion-icon color='primary' name="pencil" routerLink="/edi-pro" style="zoom:1.4; margin-right: 10px;"></ion-icon>
+    <ion-icon color='primary' routerLink="/edi-pro" name="pencil" style="zoom:1.4; margin-right: 10px;"></ion-icon>
   </ion-buttons>
+ 
 </ion-toolbar>
-
 <ion-content>
 
+  <div id="container">
+  <div id="mid-cont">
+      <ion-grid>
+       <ion-row>
+        <div id="img-placeholder">
+          <img src="{{userID?.img}}" >
+         </div>
+       </ion-row>
+       <ion-row><h5>Resturant Name : {{userID?.userName}}</h5></ion-row>
+       <ion-row><h5>Resturant Address : {{userID?.userAdd}}</h5></ion-row>
+       <ion-row><h5>Resturant Email : {{userID?.resEmail}}</h5></ion-row>
+       <ion-row><h5>Resturant Number : {{userID?.resNumb}}</h5></ion-row>
+     </ion-grid>
+
+    </div>
+  </div>
 </ion-content>

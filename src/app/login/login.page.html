@@ -11,18 +11,20 @@
   <h1><p>Log In </p></h1>
   <h5><p>Please enter details to login to your account.</p></h5>
   </div>
-
-
-
+<ion-grid>
+  <ion-row>
   <ion-item>
     <ion-label position="floating"  >User Email</ion-label>
     <ion-input #email></ion-input>
   </ion-item>
+</ion-row>
+<ion-row>
   <ion-item>
     <ion-label position="floating"   >Password</ion-label>
     <ion-input #password></ion-input>
   </ion-item>
- 
+</ion-row>
+</ion-grid>
 <br><br>
   <ion-button color="primary"  (click)="onSignIn(email.value, password.value)">Log In</ion-button>
   <br>

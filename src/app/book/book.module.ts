@@ -4,9 +4,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { EdiProPageRoutingModule } from './edi-pro-routing.module';
+import { BookPageRoutingModule } from './book-routing.module';
 
-import { EdiProPage } from './edi-pro.page';
+import { BookPage } from './book.page';
 
 @NgModule({
   imports: [
@@ -14,8 +14,8 @@ import { EdiProPage } from './edi-pro.page';
     FormsModule,
     IonicModule,
     ReactiveFormsModule,
-    EdiProPageRoutingModule
+    BookPageRoutingModule
   ],
-  declarations: [EdiProPage]
+  declarations: [BookPage]
 })
-export class EdiProPageModule {}
+export class BookPageModule {}

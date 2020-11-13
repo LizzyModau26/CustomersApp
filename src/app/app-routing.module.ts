@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'edi-pro',
     loadChildren: () => import('./edi-pro/edi-pro.module').then( m => m.EdiProPageModule)
   },
+  {
+    path: 'book/:id',
+    loadChildren: () => import('./book/book.module').then( m => m.BookPageModule)
+  },
 ];
 
 @NgModule({

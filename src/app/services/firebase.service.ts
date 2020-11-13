@@ -32,4 +32,8 @@ isLoggedIn = false
     getResturants() {
       return this.firestore.collection('resturants').snapshotChanges();
     }
+
+    addProfile(){
+      return this.firestore.collection('users')
+    }
   }

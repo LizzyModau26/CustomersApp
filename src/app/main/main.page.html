@@ -5,7 +5,7 @@
       <ion-menu-button color="primary" autoHide="false"></ion-menu-button>
     </ion-buttons>
     <ion-buttons slot="end">
-      <ion-icon color='primary' name="search-outline" style="zoom:1.5; margin-right: 10px;"></ion-icon>
+      <ion-icon color='primary' name="person" routerLink="/profile" style="zoom:1.4; margin-right: 10px;"></ion-icon>
     </ion-buttons>
   </ion-toolbar>
 <ion-content>
@@ -15,13 +15,13 @@
   <div *ngFor="let item of restuList" >
     <ion-row>
       <ion-card [routerLink]="'/res-view/'+item.id">
-        <img style=" height: 120px;" src= {{item.img}} >
+        <img style=" height: 120px; width: 100%" src= {{item.img}} >
         <ion-card-header>
-          <ion-card-subtitle>{{item.resName}} </ion-card-subtitle>
-          <ion-card-title>{{item.resAdd}}</ion-card-title>
+          <ion-card-title>{{item.resName}}</ion-card-title>
+          <ion-card-subtitle>{{item.resAdd}} </ion-card-subtitle>
         </ion-card-header>
         <ion-card-content>
-          {{item.resDes}} <br> {{item.resRate}}
+          {{item.resRate}} <ion-icon name="star" color="primary"></ion-icon>
         </ion-card-content>
       </ion-card>
     </ion-row>

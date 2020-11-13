@@ -1,5 +1,5 @@
 <ion-toolbar>
-  <ion-title></ion-title>
+  <ion-title>{{resturants?.resName}}</ion-title>
   <ion-buttons slot="start">
     <ion-icon routerLink="/main" name="arrow-back-outline" color="primary" autoHide="false" style="zoom:1.5; margin-left: 10px;"></ion-icon>
   </ion-buttons>
@@ -9,4 +9,6 @@
 
 <ion-content>
 
+
+  <ion-button [routerLink]="'/book/'+ resturants?.resID">Make A Reservation</ion-button>
 </ion-content>

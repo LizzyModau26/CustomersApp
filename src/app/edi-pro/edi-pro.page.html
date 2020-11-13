@@ -1,12 +1,46 @@
 <ion-toolbar>
-  <ion-title>Edit Profile</ion-title>
+  <ion-title>Edit Store Profile</ion-title>
   <ion-buttons slot="start">
-    <ion-icon routerLink="/profile" name="arrow-back-outline" color="primary" autoHide="false" style="zoom:1.5; margin-left: 10px;"></ion-icon>
+    <ion-icon routerLink="/main" name="arrow-back-outline" color="primary" autoHide="false" style="zoom:1.5; margin-left: 10px;"></ion-icon>
   </ion-buttons>
-
-  
 </ion-toolbar>
 
 <ion-content>
-
+  <div id="container">
+    <div id="mid-cont">
+  <form [formGroup]="profileForm" (ngSubmit)="addUser()">
+    <ion-grid>
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input type="text" formControlName="userName"></ion-input>
+    </ion-item>
+    <ion-item>
+   <ion-label position="floating">Address</ion-label>
+      <ion-input  type="text" formControlName="userAdd"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Number</ion-label>
+      <ion-input  type="number" formControlName="userNumb"></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input  type="email" formControlName="userEmail"></ion-input>
+    </ion-item>
+  </ion-col>
+</ion-row>
+  
+<br>
+    <ion-item>
+      <ion-input  type="file" formControlName="img" accept="image/*" (change)="addPic($event)"></ion-input>
+    </ion-item>
+  
+  </ion-grid>
+</form>
+<br>
+<ion-button type="submit" (click)='addUser()'>Save</ion-button>
+</div>
+</div>
 </ion-content>
+
