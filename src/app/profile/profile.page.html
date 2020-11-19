@@ -1,13 +1,12 @@
+<ion-header>
 <ion-toolbar>
   <ion-title>My Profile</ion-title>
   <ion-buttons slot="start">
-    <ion-icon routerLink="/main" name="arrow-back-outline" color="primary" autoHide="false" style="zoom:1.5; margin-left: 10px;"></ion-icon>
+    <ion-icon routerLink="/main" name="chevron-back-outline" color="primary" autoHide="false" style="zoom:1.5; margin-left: 10px;"></ion-icon>
   </ion-buttons>
-  <ion-buttons slot="end">
-    <ion-icon color='primary' routerLink="/edi-pro" name="pencil" style="zoom:1.4; margin-right: 10px;"></ion-icon>
-  </ion-buttons>
- 
+
 </ion-toolbar>
+</ion-header>
 <ion-content>
 
   <div id="container">
@@ -18,10 +17,13 @@
           <img src="{{userID?.img}}" >
          </div>
        </ion-row>
-       <ion-row><h5>Resturant Name : {{userID?.userName}}</h5></ion-row>
-       <ion-row><h5>Resturant Address : {{userID?.userAdd}}</h5></ion-row>
-       <ion-row><h5>Resturant Email : {{userID?.resEmail}}</h5></ion-row>
-       <ion-row><h5>Resturant Number : {{userID?.resNumb}}</h5></ion-row>
+       <ion-row><h5> Name : {{userID?.userName}}</h5></ion-row>
+       <ion-row><h5> Address : {{userID?.userAdd}}</h5></ion-row>
+       <ion-row><h5> Email : {{userID?.userEmail}}</h5></ion-row>
+       <ion-row><h5> Number : {{userID?.userNumb}}</h5></ion-row>
+
+       <br><br>
+       <ion-button routerLink="/edi-pro" color="primary">Edit Profile</ion-button>
      </ion-grid>
 
     </div>

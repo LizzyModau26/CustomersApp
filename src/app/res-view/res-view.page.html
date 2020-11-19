@@ -8,7 +8,32 @@
 </ion-toolbar>
 
 <ion-content>
+<div id="cont1" style="background-image: url('{{resturants?.img}}'); background-size: cover; background-position: 100vh;">
 
-
-  <ion-button [routerLink]="'/book/'+ resturants?.resID">Make A Reservation</ion-button>
+</div>
+<div id="cont2">
+<h1>{{resturants?.resName}}</h1>
+<br>
+<ion-grid>
+  <ion-row><h4><i>{{resturants?.resDes}}</i></h4></ion-row>
+  <ion-row><h2>{{resturants?.resAdd}}</h2></ion-row>
+  <ion-row><ion-col col-4><h2>{{resturants?.resTel}}</h2></ion-col><ion-col col-4><h2>{{resturants?.resEmail}}</h2></ion-col></ion-row>
+  <ion-row><h2>{{resturants?.resRate}}<ion-icon name='star' color="primary"></ion-icon></h2></ion-row>
+</ion-grid>
+<br>
+<h1>Our Dishes</h1>
+<ion-grid  >
+  <ion-row >
+    <ion-col col-4 *ngFor="let dish of restu">
+  <img src="{{dish?.dishimg}}">
+  <ion-header>
+    <ion-card-subtitle>{{dish?.dishName}}</ion-card-subtitle>
+    <ion-card-subtitle>{{dish?.dishPrice}}</ion-card-subtitle>
+  </ion-header>
+</ion-col>
+</ion-row>
+</ion-grid>
+<br>
+  <ion-button color="primary" [routerLink]="'/book/'+ resturants?.resID">Make A Reservation</ion-button>
+</div>
 </ion-content>
