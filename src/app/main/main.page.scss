@@ -1,45 +1,91 @@
 #main-cont{
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 100%;
-    height: 90%;
+    height: 100%;
     font-family: 'Nunito', serif;
-    
-    
+    // background-color:red;
     }
     #mid-cont{
         display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 80%;
-       
-       margin-top: 30px;
-        font-family: 'Nunito', serif;
-        
-        
-        }
-    ion-title{
-        text-align: center;
-       
-        font-family: 'Nunito', serif;
-        
-    }
-    img{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-       
-        background-repeat: no-repeat;
-        position: relative;
-    }
-    ion-card{
-        display: flex ;
         flex-direction: column;
         width: 90%;
-        height: 50%;
-        text-align: left;
+        height: 90%;
+        font-family: 'Nunito', serif;
+        background-color:white;
+        }
+        #toolbar{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 10%;
+            // background-color:red;
+        }
+        .searchbar{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            height: 6%;
+            color: rgba(128, 128, 128, 0.596);
+            outline-color: grey;
+        }
+    // ion-title{
+    //     text-align: center;
+       
+    //     font-family: 'Nunito', serif;
+        
+    // }
+    // img{
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+       
+    //     background-repeat: no-repeat;
+    //     position: relative;
+    // }
+    // ion-card{
+    //     display: flex ;
+    //     flex-direction: column;
+    //     width: 90%;
+    //     height: 50%;
+    //     text-align: left;
       
 
-    }
+    // }
+    .card-background-page {
+
+        ion-card {
+            display: flex;
+            flex-direction: row;
+          position: relative;
+          text-align: center;
+          
+        }
+      
+        ion-card-title {
+          position: absolute;
+          top: 36%;
+          font-size: 2.0em;
+          width: 100%;
+          font-weight: bold;
+          color: #fff;
+        }
+      
+        ion-card-subtitle {
+          font-size: 1.0em;
+          position: absolute;
+          top: 52%;
+          width: 100%;
+          color: #fff;
+        }
+      
+      }
+      ion-slides{
+          display: flex;
+          height: 25%;
+          width: 100%;
+          margin-top: 15px;
+      }
+
+   
