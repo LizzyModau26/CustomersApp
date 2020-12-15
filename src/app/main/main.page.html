@@ -56,8 +56,9 @@
     </ion-slide>
     <ion-slide>
       <ion-card>
+        <ion-card-title>Buffet</ion-card-title>
        <img src="assets/images/celebration-wedding-luxury-service-decoration.jpg"/>
-       <ion-card-title>Buffet</ion-card-title>
+       
        <ion-card-subtitle>41 Listings</ion-card-subtitle>
      </ion-card>
      </ion-slide>
@@ -90,6 +91,26 @@
     </ion-card>
     </ion-slide>
   </ion-slides>
+
+  <br>
+  <h3>Explore Resturants</h3>
+  <br>
+  <ion-grid>
+    <div *ngFor="let item of restuList" >
+      <ion-row><ion-col>
+        <ion-card id="restcard" [routerLink]="'/res-view/'+item.id">
+          <img style=" height: 120px; width: 100%" src= {{item.img}} >
+          <ion-card-header>
+            <ion-card-title>{{item.resName}}</ion-card-title>
+            <ion-card-subtitle>{{item.resAdd}} </ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            {{item.resRate}} <ion-icon name="star" color="primary"></ion-icon>
+          </ion-card-content>
+       </ion-card></ion-col>
+      </ion-row>
+      </div>
+    </ion-grid>
 </div>
 </div>
 </ion-content>
