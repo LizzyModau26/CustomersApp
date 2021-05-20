@@ -1,14 +1,13 @@
+<ion-header>
 <ion-toolbar>
-  <ion-title>{{resturants?.resName}}</ion-title>
+  <ion-title>res name</ion-title>
   <ion-buttons slot="start">
     <ion-icon routerLink="/main" name="chevron-back-outline" color="primary" autoHide="false" style="zoom:1.5; margin-left: 10px;"></ion-icon>
   </ion-buttons>
- 
- 
 </ion-toolbar>
-
+</ion-header>
 <ion-content>
-<div id="cont1" style="background-image: url('{{resturants?.img}}'); background-size: cover; background-position: 100vh;">
+<!-- <div id="cont1" style="background-image: url('{{resturants?.img}}'); background-size: cover; background-position: 100vh;">
 
 </div>
 <div id="cont2">
@@ -35,5 +34,17 @@
 </ion-grid>
 <br>
   <ion-button color="primary" [routerLink]="'/book/'+ resturants?.resID">Make A Reservation</ion-button>
-</div>
+</div> -->
+
+<main>
+  <figure>
+    <img src="" width="100%" height="100%" alt="Resturant Image" loading="lazy">
+  </figure>
+
+</main>
+
+
+
+
+
 </ion-content>

@@ -1,104 +1,17 @@
-<!-- <ion-header>
-  <ion-toolbar>
-    <ion-title>Home</ion-title>
-    <ion-buttons slot="start">
-      <ion-menu-button color="primary" autoHide="false"></ion-menu-button>
-    </ion-buttons>
-    <ion-buttons slot="end">
-      <ion-icon color='primary' name="person" routerLink="/profile" style="zoom:1.4; margin-right: 10px;"></ion-icon>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-<ion-content>
-  <div id="main-cont">
-<div id="mid-cont">
-<ion-grid>
-  <div *ngFor="let item of restuList" >
-    <ion-row>
-      <ion-card [routerLink]="'/res-view/'+item.id">
-        <img style=" height: 120px; width: 100%" src= {{item.img}} >
-        <ion-card-header>
-          <ion-card-title>{{item.resName}}</ion-card-title>
-          <ion-card-subtitle>{{item.resAdd}} </ion-card-subtitle>
-        </ion-card-header>
-        <ion-card-content>
-          {{item.resRate}} <ion-icon name="star" color="primary"></ion-icon>
-        </ion-card-content>
-      </ion-card>
-    </ion-row>
-    </div>
-  </ion-grid>
-</div>
-  </div>
-</ion-content> -->
-
-<ion-content>
-  <div id="main-cont">
-    
-    <div id="mid-cont">
-      <div id="toolbar">
+<!-- <div id="toolbar">
         <ion-buttons slot="start">
           <ion-menu-button color="primary" autoHide="false"></ion-menu-button>
         </ion-buttons>
         <ion-buttons slot="end">
           <ion-icon color='primary' name="person" routerLink="/profile" style="zoom:1.4; margin-right: 10px;"></ion-icon>
         </ion-buttons>
-      </div>
-  <ion-button expand="block" fill="outline" shape="round"  class="searchbar">Search<ion-icon name="search" slot="end"></ion-icon></ion-button>
-  <h3>Explore Resturants</h3>
-  <ion-slides>
-    <ion-slide>
-     <ion-card>
-      <img src="assets/images/big-sandwich-hamburger-with-juicy-beef-burger-cheese-tomato-red-onion-wooden-table.jpg"/>
-      <div class="card-title">São Paulo</div>
-      <div class="card-subtitle">41 Listings</div>
-    </ion-card>
-    </ion-slide>
-    <ion-slide>
-      <ion-card>
-        <ion-card-title>Buffet</ion-card-title>
-       <img src="assets/images/celebration-wedding-luxury-service-decoration.jpg"/>
-       
-       <ion-card-subtitle>41 Listings</ion-card-subtitle>
-     </ion-card>
-     </ion-slide>
-     <ion-slide>
-      <ion-card>
-       <img src="assets/images/close-up-hands-barista-make-latte-coffee-art-paint.jpg"/>
-       <div class="card-title">São Paulo</div>
-       <div class="card-subtitle">41 Listings</div>
-     </ion-card>
-     </ion-slide>
-     <ion-slide>
-      <ion-card>
-       <img src="assets/images/wine-glass.jpg"/>
-       <div class="card-title">São Paulo</div>
-       <div class="card-subtitle">41 Listings</div>
-     </ion-card>
-     </ion-slide>
-    <ion-slide>
-      <ion-card>
-      <img src="assets/images/delicious-exotic-cocktail.jpg"/>
-      <div class="card-title">Amsterdam</div>
-      <div class="card-subtitle">64 Listings</div>
-    </ion-card>
-    </ion-slide>
-    <ion-slide>
-     <ion-card>
-      <img src="assets/images/display-bakery-item-sale-market-stall.jpg"/>
-      <div class="card-title">San Francisco</div>
-      <div class="card-subtitle">72 Listings</div>
-    </ion-card>
-    </ion-slide>
-  </ion-slides>
+      </div> -->
 
-  <br>
-  <h3>Explore Resturants</h3>
-  <br>
-  <ion-grid>
+
+<!-- <ion-grid>
     <div *ngFor="let item of restuList" >
       <ion-row><ion-col>
-        <ion-card id="restcard" [routerLink]="'/res-view/'+item.id">
+        <ion-card id="restcardrouterLink]="'/res-view/'+item.id"" [>
           <img style=" height: 120px; width: 100%" src= {{item.img}} >
           <ion-card-header>
             <ion-card-title>{{item.resName}}</ion-card-title>
@@ -110,8 +23,44 @@
        </ion-card></ion-col>
       </ion-row>
       </div>
-    </ion-grid>
-</div>
-</div>
-</ion-content>
+    </ion-grid> -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="primary" autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-icon color='primary' name="person" routerLink="/profile" style="zoom:1.4; margin-right: 10px;"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 
+<ion-content>
+  <main>
+    <header>
+      <h1>Welcome</h1>
+      <p>Explore Our Resturants</p>
+    </header>
+    <section *ngFor="let item of restuList" >
+      <ion-searchbar mode="ios" postion="fixed" placeholder="Search for resturants"></ion-searchbar>
+      <div class="card" alt="product card">
+        <img src= {{item.img}} alt="product-image">
+        <div id="card-content">
+          <p id="resname">{{item.resName}}</p>
+          <p id="addr">{{item.resAdd}}</p>
+          <div id="rating">
+            <p>
+              <ion-icon name="star" color="primary"></ion-icon>{{item.resRate}}
+            </p>
+            <a href="#">view</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <ion-fab vertical="bottom" horizontal="end" position="fixed">
+      <ion-fab-button>
+        <ion-icon name="calendar-outline" routerLink="/my-bookings"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </main>
+</ion-content>

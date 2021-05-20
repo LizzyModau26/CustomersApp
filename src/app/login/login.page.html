@@ -1,44 +1,32 @@
 <div id="logo-con">
- 
-  <img alt="" height="40"   src="../../assets/logo/logo.png" > 
-  
+
+  <img alt="" height="40" src="../../assets/logo/logo.png">
+
 </div>
 
 <ion-content id="container">
   <div id="main-holder">
+    <h1>
+      <p>Log In </p>
+    </h1>
+    <h5>
+      <p>Please enter details to login to your account.</p>
+    </h5>
 
-<!-- <ion-grid>
-  <ion-row>
-  <ion-item>
-    <ion-label position="floating"  >User Email</ion-label>
-    <ion-input #email></ion-input>
-  </ion-item>
-</ion-row>
-<ion-row>
-  <ion-item>
-    <ion-label position="floating"   >Password</ion-label>
-    <ion-input #password></ion-input>
-  </ion-item>
-</ion-row>
-</ion-grid> -->
-
-<h1><p>Log In </p></h1>
-<h5><p>Please enter details to login to your account.</p></h5>
-  
-  <div class="col">
-    <input class="textbox" type="text" placeholder="Email" #email>
-    <span class="focus-border"></span>
+    <div class="col">
+      <input class="textbox" type="text" placeholder="Email" #email>
+      <span class="focus-border"></span>
+    </div>
+    <br><br>
+    <div class="col">
+      <input class="textbox" type="password" placeholder="Password" #password>
+      <span class="focus-border"></span>
+    </div>
+    <br><br>
+    <ion-button color="primary" (click)="onSignIn(email.value, password.value)">Log In</ion-button>
+    <br>
+    <a routerLink="/register">Dont Have An Account? Create An Account.</a>
   </div>
-  <br><br>
-  <div class="col">
-    <input class="textbox" type="password" placeholder="Password" #password>
-    <span class="focus-border"></span>
-  </div>
-<br><br>
-  <ion-button color="primary"  (click)="onSignIn(email.value, password.value)">Log In</ion-button>
-  <br>
-  <a routerLink="/register" >Dont Have An Account? Create An Account.</a>
-</div>
 
 
 </ion-content>

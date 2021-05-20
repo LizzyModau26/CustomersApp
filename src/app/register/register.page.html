@@ -11,17 +11,16 @@
   <h5><p>Please create an account .</p></h5>
 </div>
 
+  <div class="col">
+    <input class="textbox" type="text" placeholder="Email" #emailSignUp>
+    <span class="focus-border"></span>
+  </div>
+  <br><br>
+  <div class="col">
+    <input class="textbox" type="password" placeholder="Password" #passwordSignUp>
+    <span class="focus-border"></span>
+  </div>
 
-
-
-  <ion-item>
-    <ion-label position="floating">User Email</ion-label>
-    <ion-input type="text" #emailSignUp ></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Password</ion-label>
-    <ion-input type="password" #passwordSignUp></ion-input>
-  </ion-item>
 <br><br>
   <ion-button color="primary"  (click)="onSignUp(emailSignUp.value, passwordSignUp.value)"  >Create Account</ion-button>
   <br>

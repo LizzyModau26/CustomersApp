@@ -1,9 +1,11 @@
+<ion-header>
 <ion-toolbar>
-  <ion-title>Edit Store Profile</ion-title>
+  <ion-title>Edit Your Profile</ion-title>
   <ion-buttons slot="start">
-    <ion-icon routerLink="/main" name="-back-outline" color="primary" autoHide="false" style="zoom:1.5; margin-left: 10px;"></ion-icon>
+    <ion-icon routerLink="/main" name="chevron-back-outline" color="primary" autoHide="false" style="zoom:1.5; margin-left: 10px;"></ion-icon>
   </ion-buttons>
 </ion-toolbar>
+</ion-header>
 
 <ion-content>
   <div id="container">
@@ -39,8 +41,10 @@
   </ion-grid>
 </form>
 <br>
-<ion-button type="submit" (click)='addUser()'>Save</ion-button>
+<ion-button shape="block" type="submit" (click)='addUser()'>Save Changes</ion-button>
 </div>
 </div>
+
+
 </ion-content>
 

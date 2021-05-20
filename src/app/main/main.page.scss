@@ -1,91 +1,89 @@
-#main-cont{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    font-family: 'Nunito', serif;
-    // background-color:red;
-    }
-    #mid-cont{
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-        height: 90%;
-        font-family: 'Nunito', serif;
-        background-color:white;
-        }
-        #toolbar{
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            height: 10%;
-            // background-color:red;
-        }
-        .searchbar{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            width: 100%;
-            height: 6%;
-            color: rgba(128, 128, 128, 0.596);
-            outline-color: grey;
-        }
-    // ion-title{
-    //     text-align: center;
-       
-    //     font-family: 'Nunito', serif;
-        
-    // }
-    // img{
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-       
-    //     background-repeat: no-repeat;
-    //     position: relative;
-    // }
-    #restcard{
-        display: flex ;
-        flex-direction: column;
-        width: 90%;
-        height: 20%;
-        text-align: left;
-      
+main{
+  font-size: 10px;
+  background-color: whitesmoke !important;
+  
+}
+header{
+  background:#ffffff;
+  height:max-content;
+  padding-bottom:15px;
+  width:100%;
+}
+h1{
+  font-size:2.5rem;
+  font-weight:Bold;
+  margin: 10px 20px;
+}
+p{
+  font-size: 15px;
+  margin: 12px 20px;
+}
 
-    }
-    .card-background-page {
+section{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  background:#ffffff;
+  margin-top:0.5rem;
+  width:100%;
+  height: 60% ;
+  position:relative;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
 
-        ion-card {
-            display: flex;
-            flex-direction: row;
-          position: relative;
-          text-align: center;
-          width: 80%;
-        }
-      
-        ion-card-title {
-          position: absolute;
-          top: 36%;
-          font-size: 2.0em;
-          width: 100%;
-          font-weight: bold;
-          color: #fff;
-        }
-      
-        ion-card-subtitle {
-          font-size: 1.0em;
-          position: absolute;
-          top: 52%;
-          width: 100%;
-          color: #fff;
-        }
-      
-      }
-      ion-slides{
-          display: flex;
-          height: 25%;
-          width: 100%;
-          margin-top: 15px;
-      }
+.card{
+ 
+  padding:1rem .5rem 1rem .5rem;
+  margin: 15px 0px;
+  width: 90%;
+  box-shadow: -4px -4px 15px rgba(0, 0, 0, 0.19) ;
+  border-radius:5px;
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center;
+}
 
+img{
+  width:30%;
+  height: 100px;
+  background-color: yellowgreen;
+}
+#card-content{
+  display:flex;
+  flex-direction:column;
+  width:60%;
+  justify-content: space-between;
+  align-items: left;
+  height: 100px;
+}
+ p{
+  display:flex;
+  flex-wrap: wrap;
+}
+#resname{
+  font-weight: 800;
+  display: inline-block;
+  margin-top:0px !important;
+  margin-bottom: 5px !important;
+  
+}
+#addr{
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+#rating{
+  display:flex;
+  width:100%;
+  align-items:center;
+  margin-top: 0px !important;
+  padding-top: 0px !important;
+  justify-content:space-between;
+}
+a{
+  
+  font-size: 10px;
+  margin-right: 2rem;
+  color:blue;
+}
    
